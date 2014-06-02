@@ -1,4 +1,14 @@
 Tpm1::Application.routes.draw do
+  get "users/new"
+  root  'static_pages#home'
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/privacy', to: 'static_pages#privacy', via: 'get'
+  match '/getting_started',    to: 'static_pages#getting_started',    via: 'get'
+  match '/saving',    to: 'static_pages#saving',    via: 'get'
+  match '/spending',    to: 'static_pages#spending',    via: 'get'
+  match '/investing',    to: 'static_pages#investing',    via: 'get'
+  match '/news',    to: 'static_pages#news',    via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
